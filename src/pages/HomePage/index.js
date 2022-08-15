@@ -1,4 +1,5 @@
 import { Layout, Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from './../../assets/images/badminton-icon.svg';
 import './style.css';
@@ -31,8 +32,11 @@ const items = [
 ];
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   function onClick(e) {
-    console.log(e);
+    const page = e.key;
+    navigate(page);
   }
 
   return (
