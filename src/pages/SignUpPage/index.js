@@ -11,6 +11,9 @@ const { Title, Text } = Typography;
 const validateMessages = {
   // eslint-disable-next-line no-template-curly-in-string
   required: ' O campo ${label} é obrigatório',
+  string: {
+    min: 'Deve-se ter ao menos 8 caracteres',
+  },
   types: {
     email: 'Insira um e-mail válido',
   },
@@ -41,7 +44,7 @@ export default function SignUpPage() {
     const promise = signUp(signUpData);
 
     promise.then((response) => {
-      navigate('/');
+      navigate('/sign-in');
     });
 
     promise.catch((error) => {
@@ -91,10 +94,11 @@ export default function SignUpPage() {
           </Form.Item>
           <Form.Item
             label='Senha'
-            name='passwordConfirmation'
+            name='password'
             rules={[
               {
                 required: true,
+                min: 8,
               },
             ]}
           >
@@ -102,10 +106,11 @@ export default function SignUpPage() {
           </Form.Item>
           <Form.Item
             label='Confirme a senha'
-            name='password'
+            name='passwordConfirmation'
             rules={[
               {
                 required: true,
+                min: 8,
               },
             ]}
           >
@@ -117,7 +122,7 @@ export default function SignUpPage() {
             </Button>
           </Form.Item>
         </Form>
-        <Link to='/'>
+        <Link to='/sign-in'>
           <Text underline id='link'>
             Caso já seja cadastrado, faça o login aqui!
           </Text>
