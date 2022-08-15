@@ -90,7 +90,7 @@ export default function SignUpPage() {
               },
             ]}
           >
-            <Input />
+            <Input id='email'/>
           </Form.Item>
           <Form.Item
             label='Senha'
@@ -102,7 +102,7 @@ export default function SignUpPage() {
               },
             ]}
           >
-            <Input.Password />
+            <Input.Password id='password' />
           </Form.Item>
           <Form.Item
             label='Confirme a senha'
@@ -114,7 +114,7 @@ export default function SignUpPage() {
               },
             ]}
           >
-            <Input.Password />
+            <Input.Password id='passwordConfirmation' />
           </Form.Item>
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type='primary' htmlType='submit' loading={loading}>

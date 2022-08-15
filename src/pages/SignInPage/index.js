@@ -81,7 +81,7 @@ export default function SignInPage() {
               },
             ]}
           >
-            <Input />
+            <Input id='email' />
           </Form.Item>
           <Form.Item
             label='Senha'
@@ -93,7 +93,7 @@ export default function SignInPage() {
               },
             ]}
           >
-            <Input.Password />
+            <Input.Password id='password'/>
           </Form.Item>
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type='primary' htmlType='submit' loading={loading}>
