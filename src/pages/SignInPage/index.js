@@ -55,8 +55,8 @@ export default function SignInPage() {
   }
 
   return (
-    <div className='container'>
-      <div className='content'>
+    <div className='container-signIn'>
+      <div className='content-signIn'>
         <Space direction='vertical' size='large' align='center'>
           <img className='logo' src={Logo} alt='badminton logo' />
           <Title level={1} id='title'>
@@ -68,7 +68,7 @@ export default function SignInPage() {
           layout='vertical'
           onFinish={onFinish}
           validateMessages={validateMessages}
-          id='signUp'
+          id='signIn'
           disabled={loading}
         >
           <Form.Item

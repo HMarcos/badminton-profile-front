@@ -1,11 +1,32 @@
-import { Layout, Button, Form, Input, Radio } from 'antd';
+import { Layout, Button, Form, Input, Radio, notification, Typography } from 'antd';
+import { useState } from 'react';
 
 import Logo from './../../assets/images/badminton-icon.svg';
 import './style.css';
 
 const { Header, Content, Footer } = Layout;
 
+const { Title } = Typography;
+
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 16 },
+};
+
+const validateMessages = {
+  // eslint-disable-next-line no-template-curly-in-string
+  required: ' O campo ${label} é obrigatório',
+};
+
+const openNotification = (type, message, description) => {
+  notification[type]({
+    message,
+    description,
+  });
+};
+
 export default function RegisterCategoryPage() {
+  const [loading, setLoading] = useState(false);
   return (
     <Layout className='layout'>
       <Header id='header'>
@@ -14,16 +35,14 @@ export default function RegisterCategoryPage() {
           <p>Badminton Profile</p>
         </div>
       </Header>
-      <Content id='content'>
+      <Content id='content-register-category'>
+        <Title level={1} id='title-category'> Cadastrar categoria</Title>
         <Form
-          id='form'
-          labelCol={{
-            span: 4,
-          }}
-          wrapperCol={{
-            span: 14,
-          }}
+          name='form-category'
+          id='form-category'
           layout='horizontal'
+          disabled={loading}
+          validateMessages={validateMessages}
         >
           <Form.Item name='category' label='Categoria' rules={[{ required: true }]}>
             <Input />
@@ -35,7 +54,12 @@ export default function RegisterCategoryPage() {
             </Radio.Group>
           </Form.Item>
           <Form.Item name='description' label='Descrição' rules={[{ required: true }]}>
-            <Input />
+            <Input.TextArea showCount maxLength={150} />
+          </Form.Item>
+          <Form.Item className='register-button'>
+            <Button type='primary' htmlType='submit'>
+              Cadastrar
+            </Button>
           </Form.Item>
         </Form>
       </Content>

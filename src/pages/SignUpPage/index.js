@@ -64,8 +64,8 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className='container'>
-      <div className='content'>
+    <div className='container-signUp'>
+      <div className='content-signUp'>
         <Space direction='vertical' size='large' align='center'>
           <img className='logo' src={Logo} alt='badminton logo' />
           <Title level={1} id='title'>

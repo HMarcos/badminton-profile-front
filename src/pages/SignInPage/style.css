@@ -1,57 +1,61 @@
 body {
-    background-color: white;
+  background-color: white;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    min-width: 100vw;
+.container-signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: fit-content;
+  width: fit-content;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
+.content-signIn {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120px;
 }
 
 #title {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    color: #1890FF;
+  color: #1890ff;
 }
 
-#signUp{
-    width: 100%;
+#signIn {
+  width: 100%;
 }
 
-#signUp label, #signUp input, #signUp button {
-   font-size: 18px;
+#signIn label,
+#signIn input,
+#signIn button {
+  font-size: 18px;
 }
 
-#signUp button {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#signIn button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #formButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #link {
-    font-size: 16px;
+  font-size: 16px;
 }
